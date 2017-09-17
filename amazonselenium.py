@@ -3,10 +3,11 @@ from bs4 import BeautifulSoup
 from textblob import TextBlob
 from textblob.classifiers import NaiveBayesClassifier
 from selenium import webdriver
+import time
 
 #raw_query = raw_input("Enter the Product:")
 #raw_list = "+".join(raw_query.split())
-#query = 's='+str(raw_list)+"#"+str(raw_list)'
+#query = str(raw_list)
 #url1 = 'https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords='+str(raw_list)+'&rh=i%3Aaps%2Ck%3A'+str(raw_list)
 #print url1
 #tags = []
@@ -36,12 +37,19 @@ while True:
          ('horrible', 'neg'),
          ('not good', 'neg'),
          ('very bad', 'neg'),
-         ('comfortable','pos')
+         ('comfortable','pos'),
+         ('intuitive','pos'),
+         ('fuck','neg'),
+         ('mind blowing', 'pos'),
+         ('budget friendly', 'pos'),
+         ('sleek', 'pos')
      ]
 
     cl = NaiveBayesClassifier(train)
-    #itemurl = raw_input("Enter the Url of the Review Page of the Searched Item:")
-    itemurl = 'https://www.amazon.com/Moto-Plus-5th-Generation-Lockscreen/product-reviews/B01N6NTIRH/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&reviewerType=avp_only_reviews&sortBy=recent&pageNumber='
+    #itemurl1 = 'https://www.amazon.com/Moto-Plus-5th-Generation-Lockscreen/product-reviews/B01N6NTIRH/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&reviewerType=avp_only_reviews&sortBy=recent&pageNumber=2'
+    itemurl1 = raw_input("Enter the Url of the Review Page 2 of the Searched Item:")
+    itemurl = itemurl1[0:-1]
+    
     for i in range(1,10):
         url = str(itemurl)+str(i)
 
@@ -57,8 +65,8 @@ while True:
         for line in ratings:
             
             print str(line)[62:-7]
-            total.append(str(line).lower()[61:-7])
-            total1.append(str(line).lower()[61:-7])
+            total.append(str(line).lower()[62:-7])
+            total1.append(str(line).lower()[62:-7])
         #print len(total)
         blob = TextBlob(str(total).replace(',', '.'))
         #keyword = 'camera'
@@ -139,21 +147,24 @@ f.write("""<!DOCTYPE HTML>
 						<!-- Thumbnails -->
 							<section class="thumbnails">
 								<div>
-									<a href="images/fulls/01.jpg">
+									<h2 align='center'><strong>Actual Reviews.</strong></h2>
+									<a href="images/1.jpg">
 										<img src="images/1.jpg" alt="" />
 										<h3> {0} </h3>
 									</a>
 									
 								</div>
 								<div>
-									<a href="images/fulls/03.jpg">
+									<h2 align='center'><strong>Processed Reviews.</strong></h2>
+									<a href="images/3.jpg">
 										<img src="images/3.jpg" alt="" />
 										<h3> {1} </h3>
 									</a>
 									
 								</div>
 								<div>
-									<a href="images/fulls/06.jpg">
+									<h2 align='center'><strong>Analysis Result</strong></h2>
+									<a href="images/4.jpg">
 										<img src="images/4.jpg" alt="" />
 										<h3>{2}</h3>
 									</a>
