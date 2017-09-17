@@ -1,0 +1,22 @@
+1505620932352	geckodriver	INFO	geckodriver 0.19.0
+1505620932356	geckodriver	INFO	Listening on 127.0.0.1:46257
+1505620933514	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.IE6lv7z91Nqa"
+1505620936519	Marionette	INFO	Listening on port 2828
+1505621031203	geckodriver	INFO	geckodriver 0.19.0
+1505621031207	geckodriver	INFO	Listening on 127.0.0.1:60985
+1505621032363	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.QsfZz3qm7XYf"
+1505621035356	Marionette	ERROR	Error on starting server: [Exception... "Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]"  nsresult: "0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE)"  location: "JS frame :: chrome://marionette/content/server.js :: MarionetteServer.prototype.start :: line 95"  data: no]
+[Exception... "Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]"  nsresult: "0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE)"  location: "JS frame :: chrome://marionette/content/server.js :: MarionetteServer.prototype.start :: line 95"  data: no]
+MarionetteServer.prototype.start@chrome://marionette/content/server.js:95:19
+MarionetteComponent.prototype.init@resource://gre/components/marionette.js:217:5
+MarionetteComponent.prototype.handle@resource://gre/components/marionette.js:112:5
+
+1505621298795	geckodriver	INFO	geckodriver 0.19.0
+1505621298799	geckodriver	INFO	Listening on 127.0.0.1:53925
+1505621299978	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.yy6zPQnFiQUa"
+1505621303208	Marionette	INFO	Listening on port 2828
+1505621668727	geckodriver	INFO	geckodriver 0.19.0
+1505621668731	geckodriver	INFO	Listening on 127.0.0.1:57159
+1505621669936	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.g2KOHQUjpgG3"
+1505621672981	Marionette	INFO	Listening on port 2828
+JavaScript warning: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/client/shared/demangle.js, line 0: Successfully compiled asm.js code (total compilation time 121ms; unable to cache asm.js in synchronous scripts; try loading asm.js via <script async> or createElement('script'))
