@@ -23,3 +23,6 @@ e.g https://www.amazon.com/Samsung-Galaxy-S8-Unlocked-64GB/product-reviews/B06Y1
 5. If you want to specify another keyword, do write it otherwise type 'stop'.<br><br>
 6. If you choose to stop, wait for the webpage to show up.<br>
 <br>Cheers!!!<br>
+
+
+Demo video: https://drive.google.com/open?id=0B8ySaajpW7a8Tk1UM0FsS1Z3ZjQ
